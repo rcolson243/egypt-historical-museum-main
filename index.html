@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="pages/home.html">Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/events.html">Events</a>
+    <a href="pages/event-details.html">Event Details</a>
+    <a href="pages/contact.html">Contact</a>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: muli;
+    }
+    
+    html{
+        --color-darkgrey: #302e2f;
+        --color-grey: #404040;
+        --color-darkcream: #f2ebe8;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-darkgrey);
+        height: 100vh;
+    }
+    a{
+        height: max-content;
+        width: max-content;
+        padding: 0.7rem 0;
+        margin: 20px;
+        width: 200px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+        color: var(--color-darkcream);
+        background-color: var(--color-darkgrey);
+        border: 1px solid var(--color-darkcream);
+        border-radius: 5px;
+        transition: background-color 0.6s;
+    }
+    a:hover{
+        background-color: var(--color-grey);
+    }
+</style>
+</html>

@@ -1,0 +1,657 @@
+/* POLICE ET COULEURS */
+
+*{
+    /* margin: 0;
+    padding: 0; */
+    font-family: muli;
+}
+
+@font-face {
+    font-family: 'muli';
+    src: url('fonts/muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                           
+    font-family: 'prata';
+    src: url('fonts/prata.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    --color-1: #d99578;
+    --color-2: #302e2f;
+    --color-3: #f2ebe8;
+}
+
+
+/* BANNIERE */
+
+.banner {
+    text-align: center;
+    background-image: url(../assets/contact/banner.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.banner__title {
+    color: var(--color-3);
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: prata;
+    font-weight: bold;
+}
+
+.banner__text {
+    color: var(--color-3);
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 15px;
+    font-family: prata;
+    font-weight: bold;
+}
+
+.banner__link {
+    width: 1000px;
+    margin: auto;
+}
+
+.banner__content {
+    color: var(--color-3);
+    text-align: left;
+    text-transform: uppercase;
+}
+/* INFOS */
+
+.container {
+    display: grid;
+    grid-template-columns: 530px 440px;
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    "Infos Form";
+    column-gap: 30px;
+    width: 1000px;
+    margin: 40px auto 40px;
+}
+
+img {
+    width: 530px;
+    height: 270px;
+}
+
+.office {
+    grid-area: Infos;
+    align-self: start;
+    width: 545px;
+    display: grid;
+    grid-template-columns: 250px 80px 10px 150px;
+    grid-template-rows: 250px 180px;
+    grid-template-areas: 
+    "Office Office Office Office"
+    "Infos Days Point Hours";
+    column-gap: 15px;
+    row-gap: 40px;
+}
+
+.office__img {
+    grid-area: Office;
+}
+
+.office__infos {
+    grid-area: Infos;
+    border-right: solid 1px rgb(230, 229, 229);
+    font-family: 'muli';
+}
+
+.office__days {
+    grid-area: Days;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: muli;
+}
+
+.office__hours {
+    grid-area: Hours;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: prata;
+}
+
+.office__point {
+    grid-area: Point;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.office__name {
+    font-size: 20px;
+    font-family: 'prata';
+}
+
+.office__info {
+    color: rgb(102, 101, 101);
+}
+
+/* FORMULAIRE DE CONTACT */
+
+.container__form {
+    width: 450px;
+}
+
+.form {
+    grid-area: Form;
+    display: grid;
+    width: 430px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 70px) 150px 80px;
+    grid-template-areas:
+    "FirstName LastName"
+    "Email Phone"
+    "Subject Subject"
+    "Message Message"
+    "Button .";
+    column-gap: 30px;
+    row-gap: 10px;
+}
+
+input { 
+    width: 100%;
+    height: 40px;
+}
+
+label {
+    font-family: prata;
+    vertical-align: top;
+}
+
+textarea {
+    width: 104%;
+    height: 140px;
+    vertical-align: baseline;
+}
+
+.form__firstname {
+    grid-area: FirstName;
+}
+
+.form__name {
+    grid-area: LastName;
+}
+
+.form__mail {
+    grid-area: Email;
+}
+
+.form__phone {
+    grid-area: Phone;
+}
+
+.form__subject {
+    grid-area: Subject;
+}
+
+.form__msg {
+    text-align: start;
+    grid-area: Message;
+}
+
+.button {
+    width: 100%;
+    grid-area: Button;
+    align-self: end;
+}
+
+button {
+    width: 100%;
+    color: white;
+    background: #302E2F;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* MAP */
+
+.map {
+    margin: auto;
+    width: 1000px;
+}
+
+.map__img {
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+
+/* OTHER VENUES */
+
+.venue {
+    font-family: muli;
+    display: grid;
+    grid-template-columns: 60px repeat(3, 1fr) 60px;
+    grid-template-rows: 80px 280px;
+    grid-template-areas: 
+    ". header header header ."
+    "flecheLeft Australia America Switzerland flecheRight";
+    width: 1120px;
+    /* column-gap: 30px; */
+    /* row-gap: 10px; */
+    margin: auto;
+}
+
+.venue__title {
+    grid-area: header;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+    font-family: prata;
+}
+
+.venue__Australia__img {
+    grid-area: Australia;
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+    justify-self: center;
+}
+
+.venue__Australia__info {
+    grid-area: Australia;
+    text-align: center;
+    align-self: end;
+    font-family: prata;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.venue__America__img {
+    grid-area: America;
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+    justify-self: center;
+}
+
+.venue__America__info {
+    grid-area: America;
+    text-align: center;
+    align-self: end;
+    font-family: prata;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: solid 1px rgb(230, 229, 229);
+    border-right: solid 1px rgb(230, 229, 229);
+}
+
+.venue__Switzerland__img {
+    grid-area: Switzerland;
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+    justify-self: center;
+}
+
+.venue__Switzerland__info {
+    grid-area: Switzerland;
+    text-align: center;
+    align-self: end;
+    font-family: prata;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.venue__country {
+    margin-top: 0;
+    font-size: 20px;
+    /* font-weight: bold; */
+    font-family: prata;
+}
+
+.venue__info {
+    color: rgb(102, 101, 101);
+}
+
+.flecheGauche {
+    font-size: 40px;
+    color: rgb(102, 101, 101);
+    text-align: center;
+    border: solid 1px lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+    grid-area: flecheLeft;
+    align-self: center;
+    margin: 0;
+}
+
+.flecheDroite {
+    font-size: 40px;
+    color: rgb(102, 101, 101);
+    text-align: center;
+    border: solid 1px lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+    grid-area: flecheRight;
+    align-self: center;
+    margin: 0;
+}
+
+
+/* RESPONSIVE  */
+
+/* TABLETTE  */
+
+@media screen and (max-width: 768px) {
+    .banner {
+        max-width: 768px;
+        height: 250px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner__title {
+        width: 50%;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .banner__text {
+        margin: 0;
+        width: 70%;
+    }
+
+    .banner__link {
+        width: 650px;
+        margin : 0;
+        text-align: left;
+    }
+
+    .banner__content {
+        align-self: start;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 30px;
+    }
+
+    .office {
+        grid-area: infos;
+        display: grid;
+        grid-template-columns: 650px;
+        grid-template-rows: 320px 200px 200px;
+        grid-template-areas: 
+        "img"
+        "adress"
+        "schedule";
+        column-gap: 0;
+        grid-gap: 0;
+        margin-bottom: 40px;
+    }
+
+    .office__infos {
+        display: flex;
+        flex-direction: column;
+        border-right: none;
+        border-bottom: solid 1px rgb(230, 229, 229);
+    }
+
+    .office__img {
+        grid-area: img;
+        height: 300px;
+    }
+
+    .office__pic {
+        width: 650px;
+        height: 300px;
+    }
+
+    .office__infos {
+        grid-area: adress;
+    }
+
+    .office__info {
+        margin: 5px;
+    }
+
+    .office__schedule {
+        grid-area: schedule;
+        display: grid;
+        grid-template-columns: 100px 20px 150px;
+        grid-template-areas: 
+        "days point hours";
+        padding-top: 20px;
+    }
+
+    .office__days {
+        grid-area: days;
+    }
+
+    .office__point {
+        grid-area: point;
+    }
+    .office__hours {
+        grid-area: hours;
+        justify-content: space-around;
+    }
+
+    .form {
+        grid-template-columns: 630px;
+        grid-template-rows: repeat(5, 70px) 150px 70px;
+        grid-template-areas: 
+        "FirstName"
+        "LastName"
+        "Email"
+        "Phone"
+        "Subject"
+        "Message"
+        "Button";
+    }
+
+    .form__firstname {
+        grid-area: FirstName;
+    }
+
+    .form__name {
+        grid-area: LastName;
+    }
+    
+    .form__mail {
+        grid-area: Email;
+    }
+    
+    .form__phone {
+        grid-area: Phone;
+    }
+    
+    .form__subject {
+        grid-area: Subject;
+    }
+    
+    .form__msg {
+        text-align: start;
+        grid-area: Message;
+        width: 98%;
+    }
+
+    .button {
+        width: 50%;
+        grid-area: Button;
+        align-self: end;
+    }
+
+    .map {
+        width: 650px;
+        margin-left: 30px;
+    }
+
+    .map__img {
+        width: 650px;
+        margin: auto;
+    }
+
+    .venue {
+        width: 650px;
+        grid-template-columns: 30px repeat(2, 325px) 30px;
+        grid-template-rows: 80px 280px;
+        grid-template-areas: 
+        ". header header ."
+        "flecheLeft Australia America flecheRight";
+        margin: 0;
+        margin-top: 80px;
+        /* margin-left: 30px; */
+    }
+
+    .venue__title {
+        grid-area: header;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 0;
+        font-family: prata;
+    }
+    
+    .venue__Australia__img {
+        grid-area: Australia;
+        width: 80px;
+        height: 80px;
+        padding-bottom: 20px;
+        justify-self: center;
+    }
+    
+    .venue__Australia__info {
+        grid-area: Australia;
+        text-align: center;
+        align-self: end;
+        font-family: prata;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .venue__America__img {
+        grid-area: America;
+        width: 80px;
+        height: 80px;
+        padding-bottom: 20px;
+        justify-self: center;
+    }
+    
+    .venue__America__info {
+        grid-area: America;
+        text-align: center;
+        align-self: end;
+        font-family: prata;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: none;
+    }
+
+    .venue__Switzerland__info {
+        visibility: hidden;
+    }
+
+}
+
+
+/* TELEPHONE */
+
+@media screen and (max-width: 360px) {
+    .banner {
+        max-width: 360px;
+        height: 300px;
+        padding: 0;
+    }
+
+    .banner__title {
+        width: 330px;
+        margin: 0;
+        margin-bottom: 5Px;
+        text-align: center;
+    }
+
+    .banner__text {
+        margin: 0;
+        width: 70%;
+    }
+
+    .banner__link {
+        width: 330px;
+        margin : 0;
+        text-align: left;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .office {
+        grid-template-columns: 320px;
+        grid-template-rows: 220px 200px 200px;
+    }
+
+    .office__pic {
+        width: 330px;
+        height: 200px;
+    }
+
+    .form {
+        grid-template-columns: 300px;
+    }
+
+    .button {
+        width: 60%;
+    }
+
+    .map {
+        width: 330px;
+        margin-left: 10px;
+    }
+
+    .map__img {
+        width: 330px;
+        height: 400px;
+        margin: auto;
+    }
+
+    .venue {
+        width: 80%;
+        height: 400px;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 80px 280px 60px;
+        grid-template-areas: 
+        "header header"
+        "Australia Australia"
+        "flecheLeft flecheRight";
+        margin: 0;
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .venue__America__info {
+        display: none;
+    }
+
+    .venue__Switzerland__info {
+        display: none;
+    }
+    .flecheDroite, .flecheGauche {
+        width: 30%;
+        justify-self: center;
+    }
+}

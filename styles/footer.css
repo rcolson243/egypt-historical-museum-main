@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: muli;
+    color: var(--color-text);
+}
+
+html{
+    --color-orange: #d99578;
+    --color-darkgrey: #302e2f;
+    --color-grey: #404040;
+    --color-darkcream: #f2ebe8;
+    --color-white: #f5f5f5;
+    --color-text: #666666;
+}
+
+@font-face {
+    font-family: 'muli';
+    src: url('fonts/muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*=========================
+FOOTER STRUCTURE
+=========================*/
+
+footer{  
+    background-image: url(../assets/footer/footer-bg-1-1.jpg);
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+footer>*{
+    margin: 10px;
+}
+.footer__logo{
+    height: 80px;
+}
+.footer__mail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: max-content;
+}
+.footer__mail-img-container{
+    background-color: var(--color-orange);
+    border-radius: 3px 0 0 3px;
+    height: 34px;
+    padding: 0.1rem;
+    width: 34px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.footer__mail-img{
+    height: 1.2rem;
+}
+.footer__mail-field{
+    border: none;
+    width: min(14rem, 80vw);
+    padding: 0 10px;
+    border-radius: 0 3px 3px 0;
+}
+.footer__social img{
+    height: 1rem;
+    padding: 0.5rem;
+    filter: invert(50%);
+}
+.footer__colored{
+    color: var(--color-orange);
+}

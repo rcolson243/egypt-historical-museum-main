@@ -1,0 +1,637 @@
+/* POLICE ET COULEURS */
+
+*{
+    /* margin: 0;
+    padding: 0; */
+    font-family: muli;
+}
+
+@font-face {
+    font-family: 'muli';
+    src: url('fonts/muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                           
+    font-family: 'prata';
+    src: url('fonts/prata.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    --color-1: #d99578;
+    --color-2: #302e2f;
+    --color-3: #f2ebe8;
+}
+
+
+/* BANNIERE */
+
+.banner {
+    text-align: center;
+    color: var(--color-3);
+    background-image: url(../assets/contact/banner.jpg);
+    background-size: cover;
+    background-position-x: right ;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.banner__title {
+    width: 600px;
+    color: var(--color-3);
+    font-size: 40px;
+    font-family: prata;
+    font-weight: bold;
+    margin: auto;
+    border-bottom: solid 1px var(--color-3);
+    padding: 20px;
+}
+
+.banner__search {
+    width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.banner__search1 {
+    border-right: solid 1px var(--color-3);
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.banner__search2 {
+    border-left: solid 1px var(--color-3);
+    padding-left: 20px;
+    color: var(--color-1);
+}
+
+/* SELECT */
+
+.sort {
+    width: 1000px;
+    margin: auto;
+}
+
+select {
+    width: 265px;
+    height: 70px;
+    margin: auto;
+}
+
+option {
+    font-family: prata;
+    width: 100px;
+    height: 70px;
+}
+
+button {
+    background-color: #302E2F;
+    border-radius: 5px;
+    border: none;
+    color: var(--color-3);
+    height: 70px;
+    width: 180px;
+}
+
+
+/* GRID GENERAL  */
+
+.calendar {
+    margin: 80px auto 70px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(3, 500px);
+    grid-template-areas:
+    "event1 event2 "
+    "event3 event4 "
+    "event5 event6";
+    column-gap: 30px;
+    row-gap: 40px;
+}
+
+
+/* EVENT 1 */
+
+.calendar__event1 {
+    background-image: url(../assets/events/event-4-1.jpg);
+    background-size: cover;
+    grid-area: event1;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event1-caption {
+    grid-area: Infos;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour1 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name1, .calendar__date1, .calendar__time1, .calendar__location1, .calendar__adress1 {
+    font-family: prata;
+}
+
+
+/* EVENT 2 */
+
+.calendar__event2 {
+    background-image: url(../assets/events/event-4-2.jpg);
+    background-size: cover;
+    grid-area: event2;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event2-caption {
+    grid-area: Infos;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour2 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name2, .calendar__date2, .calendar__time2, .calendar__location2, .calendar__adress2 {
+    font-family: prata;
+}
+
+
+/* EVENT 3 */
+
+.calendar__event3 {
+    background-image: url(../assets/events/event-4-3.jpg);
+    background-size: cover;
+    grid-area: event3;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event3-caption {
+    grid-area: Infos;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour3 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name3, .calendar__date3, .calendar__time3, .calendar__location3, .calendar__adress3 {
+    font-family: prata;
+}
+
+
+/* EVENT 4 */
+
+.calendar__event4 {
+    background-image: url(../assets/events/event-4-4.jpg);
+    background-size: cover;
+    grid-area: event4;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 100px 400px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event4-caption {
+    grid-area: Infos;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour4 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name4, .calendar__date4, .calendar__time4, .calendar__location4, .calendar__adress4 {
+    font-family: prata;
+}
+
+.button1, .button2, .button3, .button5, .button6 {
+    visibility: hidden;
+    position: 0;
+} 
+
+.button4 {
+    color: var(--color-3);
+    background-color: var(--color-1);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* EVENT 5 */
+
+.calendar__event5 {
+    background-image: url(../assets/events/event-4-5.jpg);
+    background-size: cover;
+    grid-area: event5;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event5-caption {
+    grid-area: Infos;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour5 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name5, .calendar__date5, .calendar__time5, .calendar__location5, .calendar__adress5 {
+    font-family: prata;
+}
+
+/* EVENT 6 */
+
+.calendar__event6 {
+    background-image: url(../assets/events/event-4-6.jpg);
+    background-size: cover;
+    grid-area: event6;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    ". Tour"
+    "Infos .";
+}
+
+.calendar__event6-caption {
+    grid-area: Infos;
+    font-family: prata;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__tour6 {
+    width: 50px;
+    height: 20px;
+    color: var(--color-2);
+    grid-area: Tour;
+    font-family: prata;
+    text-transform: uppercase;
+    justify-self: end;
+    background-color: white;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.calendar__name6, .calendar__date6, .calendar__time6, .calendar__location6, .calendar__adress6 {
+    font-family: prata;
+}
+
+.fa-location-arrow {
+    color: var(--color-1);
+}
+
+.fa-clock {
+    color: var(--color-1);
+    font-weight: bold;
+}
+
+hr {
+    width: 90%;
+    color: rgb(230, 229, 229);
+    height: 1px;
+}
+
+[class^="calendar__name"] {
+    font-size: 25px;
+}
+
+
+/* NAVIGATION */
+
+.nav {
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav__prev, .nav__2, .nav__next {
+    font-family: prata;
+    font-size: 25px;
+    padding: 10px;
+    border: solid 1px rgb(184, 184, 184);
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav__1 {
+    font-family: prata;
+    font-size: 26px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--color-3);
+    background-color: var(--color-1);
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+/* RESPONSIVE  */
+
+/* TABLETTE  */
+
+@media screen and (max-width: 768px) {
+        .banner {
+        max-width: 768px;
+        height: 250px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .banner__title {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 5px;
+        }
+
+        .banner__search {
+            margin-top: 0;
+        }
+
+        .sort {
+            width: 650px;
+        }
+
+        select {
+            width: 150px;
+            height: 70px;
+            margin: auto;
+        }
+
+        button {
+            width: 150px;
+        }
+
+        .calendar {
+            margin: 40px auto 70px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            grid-template-rows: repeat(3, 600px);
+        } 
+
+        [class^="calendar__event"] {
+            grid-template-columns: 230px 70px;
+            grid-template-rows: 230px 270px;
+            width: 300px;
+            background-position-y: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        [class^="calendar__name"]{
+            /* text-align: left; */
+            font-size: 20px;
+        }
+
+        [class^="calendar__tour"]{
+            width: 25px;
+            height: 10px;
+            font-size: 10px;
+            padding: 10px;
+        }
+
+        [class^="calendar__time"]{
+            padding-bottom: 20px;
+            border-bottom: solid 1px rgb(184, 184, 184);;
+        }
+
+        [class^="calendar__name"], [class^="calendar__date"], [class^="calendar__location"] {
+            color: var(--color-2);
+        }
+
+        [class^="calendar__time"], [class^="calendar__adress"]{
+            color:  rgb(160, 160, 160) ;
+        }
+
+        .button {
+            width: 200px;
+        }
+
+        .button4 {
+            width: 200px;
+            text-align: center;
+        }
+
+        .button1, .button2, .button3, .button5, .button6 {
+            visibility: visible;
+            color: var(--color-3);
+            background-color: var(--color-1);
+            padding: 20px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+
+/* TELEPHONE */
+
+@media screen and (max-width: 360px) {
+        .banner {
+        max-width: 360px;
+        height: 350px;
+        padding: 0;
+        }
+
+        .banner__title {
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+        font-size: 33px;
+        }
+
+        .sort {
+            width: 650px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner__search {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner__search1, .banner__search2 {
+            text-align: center;
+            border-left: none;
+            border-right: none;
+            margin: 5px;
+            width: 200px;
+        }
+
+        .banner__search1 {
+            border-bottom: solid 1px var(--color-3);
+        }
+
+        .sort {
+            width: 80%;
+            margin: auto;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .calendar {
+            width: 300px;
+            margin: 10px;
+            grid-template-columns: 300px;
+            grid-template-rows: repeat(6,600px);
+            grid-template-areas: 
+            "event1"
+            "event2"
+            "event3"
+            "event4"
+            "event5"
+            "event6";
+            row-gap: 60px;
+        }
+
+        [class^="calendar__event"] {
+            /* border: solid 1px lightgray; */
+            width: 300px;
+            background-position-y: top;
+            background-size: 100%;
+        }
+
+        [class^="calendar__name"], [class^="calendar__date"], [class^="calendar__time"], [class^="calendar__location"], [class^="calendar__adress"]{
+            margin: 15PX;
+        }
+
+        [class^="calendar__name"], [class^="calendar__date"], [class^="calendar__location"] {
+            color: var(--color-2);
+        }
+
+        [class^="calendar__time"], [class^="calendar__adress"]{
+            color:  rgb(160, 160, 160) ;
+        }
+
+        .nav {
+            margin-top: 50px;
+        }
+
+
+        helllllooooooooooooo
+}
