@@ -24,6 +24,7 @@ function updateDots(index){
         if(i===index){
             dots[i].setAttribute("class","carrousel__dot--current carrousel__dot");
         }else{
+            
             dots[i].setAttribute("class","carrousel__dot");
         }
     }
